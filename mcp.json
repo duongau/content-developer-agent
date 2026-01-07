@@ -1,0 +1,35 @@
+{
+  "servers": {
+    "microsoft-docs": {
+      "type": "http",
+      "url": "https://learn.microsoft.com/api/mcp",
+      "gallery": true
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
+    "ado-content": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@azure-devops/mcp",
+        "msft-skilling",
+        "--authentication",
+        "azcli"
+      ]
+    },
+    "content-developer-assistant": {
+      "name": "Content Developer Assistant",
+      "type": "http",
+      "url": "http://roguereporting2:8000/mcp",
+      "description": "Content Developer MCP Server",
+      "headers": {
+        "X-User-Name": "Your Name",
+        "X-User-Alias": "youralias",
+        "X-User-Role": "Content Developer"
+      }
+    }
+  }
+}
